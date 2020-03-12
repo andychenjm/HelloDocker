@@ -1,0 +1,9 @@
+version: '3'
+services:
+    logstash:
+        image: logstash_local:latest
+        build: .
+        restart: always
+        ports:
+            - 9600:9600
+            - 9601:9601

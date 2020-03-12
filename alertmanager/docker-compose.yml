@@ -1,0 +1,8 @@
+version: '3'
+services:
+    alertmanager:
+        image: alertmanager:latest
+        build: .
+        restart: always
+        ports:
+            - 9093:9093

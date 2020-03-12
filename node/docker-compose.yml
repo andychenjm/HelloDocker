@@ -1,0 +1,17 @@
+version: "3"
+services:
+    web:
+        image: "node-app"
+        build: .
+        user: "node"
+        command: "node hello.js"
+
+        restart: always
+        working_dir: /usr/code/
+        volumes:
+            - ./:/usr/code/
+
+        ports:
+            - "8010:8010"
+        environment:
+            - NODE_ENV=production
